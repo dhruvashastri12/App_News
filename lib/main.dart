@@ -1,4 +1,5 @@
 import 'package:app_news/Screens/NewsListview.dart';
+import 'package:app_news/Utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:app_news/NetworkCall/NewsResponse.dart';
 import 'package:http/http.dart' show get;
@@ -63,13 +64,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[800],
+      backgroundColor: AppColors.back_dark_purple,
       appBar: AppBar(
         title: Text(
           widget.title,
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColors.source_white_purple),
         ),
-        backgroundColor: Colors.amber[200],
+        backgroundColor: AppColors.card_light_purple,
       ),
       body: objNewsResponse == null
           ? Center(child: CircularProgressIndicator(),)
